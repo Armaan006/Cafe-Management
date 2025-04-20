@@ -127,6 +127,79 @@
       transition: all 0.3s ease;
     }
 
+    /* Features Section */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      width: 30%;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px 0;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #f1a7c1;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff6347;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
     </style>
 </head>
 
@@ -137,6 +210,10 @@
     <div class="logo">Quirk & Quench</div>
     <nav>
       <ul class="nav-links">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#features" class="nav-item">Features</a></li>
+        <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
+        <li><a href="login.html" class="btn btn-login" id="loginBtn">Login</a></li>
         <li><a href="signup.html" class="btn btn-signup" id="signupBtn">Sign Up</a></li>
       </ul>
     </nav>
@@ -153,6 +230,23 @@
       <a href="#features" class="cta">Discover Features</a>
     </div>
   </div>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Our Features</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg" alt="Order Management">
+        <h3>Order Management</h3>
+        <p>Manage customer orders seamlessly in one place.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://images.pexels.com/photos/3184167/pexels-photo-3184167.jpeg" alt="Inventory Management">
+        <h3>Inventory Tracking</h3>
+        <p>Track inventory in real-time to ensure smooth operations.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="section" style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px;">
