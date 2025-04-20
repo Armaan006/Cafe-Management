@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quirk & Quench Café Management System</title>
   <style>
-    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -29,6 +28,50 @@
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links .nav-item,
+    .btn {
+      margin-left: 20px;
+      font-size: 1.1rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links .btn {
+      background-color: #f1a7c1;
+      padding: 8px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-item:hover,
+    .btn:hover {
+      color: #ff6347;
+      transition: all 0.3s ease;
     }
 
     /* Hero Section */
@@ -76,7 +119,6 @@
       font-size: 1.2rem;
       text-transform: uppercase;
       margin-top: 40px;
-      /* Adjusted to align the button lower */
     }
 
     .hero .cta:hover {
@@ -89,6 +131,16 @@
 </head>
 
 <body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Quirk & Quench</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="signup.html" class="btn btn-signup" id="signupBtn">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
   
   <!-- Hero Section with Semi-transparent Background Image -->
   <div class="hero" id="home">
