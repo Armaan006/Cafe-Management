@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-Up</title>
+  <title>Login & Sign-Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
   <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      margin-top: 70px;
+    }
+
+    /* Navbar Styles */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -30,7 +45,8 @@
       list-style: none;
     }
 
-    .nav-links .nav-item, .nav-links .btn {
+    .nav-links .nav-item,
+    .nav-links .btn {
       margin-left: 20px;
       text-decoration: none;
       font-size: 1rem;
@@ -45,100 +61,168 @@
       border-radius: 5px;
     }
 
-    .nav-links .nav-item:hover, .nav-links .btn:hover {
+    .nav-links .nav-item:hover,
+    .nav-links .btn:hover {
       color: #ff6347;
     }
-    
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      height: 100%;
-      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    .hidden {
+      display: none;
     }
 
     .main-container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      width: 400px;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    form {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 70px);  /* Adjust for navbar height */
+      padding: 20px;
     }
 
-    label {
-      margin: 0.5rem 0 0.2rem;
+    .form-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #333;
     }
 
-    input {
-      padding: 0.8rem;
-      margin-bottom: 1rem;
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .form-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .btn {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      cursor: pointer;
       border-radius: 5px;
       font-size: 1rem;
     }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #f1a7c1;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ff6347;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .switch a {
+      color: #f1a7c1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch a:hover {
+      color: #ff6347;
+    }
   </style>
 </head>
-<body>
 
+<body>
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Quirk & Quench</div>
     <nav>
       <ul class="nav-links">
         <li><a href="home.html" class="nav-item">Home</a></li>
         <li><a href="#features" class="nav-item">Features</a></li>
-        <li><a href="about us.html" class="nav-item">About Us</a></li>
-        <li><a href="contact us.html" class="nav-item">Contact Us</a></li>
+        <li><a href="aboutus.html" class="nav-item">About Us</a></li>
+        <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
         <li><a href="login.html" class="btn">Login</a></li>
         <li><a href="signup.html" class="btn">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="main-container">
-    <h2>Sign Up</h2>
-    <form id="signup-form">
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Choose a username" required>
+  <!-- Main Content -->
+  <div class="main-container hidden">
+    <!-- Sign-Up Section -->
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <form action="cafe.html" method="GET">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" required>
 
-      <label for="email-phone-signup">Email or Phone</label>
-      <input type="text" id="email-phone-signup" placeholder="Enter your email or phone number" required>
+        <label for="email-phone-signup">Email or Phone</label>
+        <input type="text" id="email-phone-signup" placeholder="Enter your email or phone number" required>
 
-      <label for="password-signup">Password</label>
-      <input type="password" id="password-signup" placeholder="Create a password" required>
+        <label for="password-signup">Password</label>
+        <input type="password" id="password-signup" placeholder="Create a password" required>
 
-      <label for="confirm-password">Confirm Password</label>
-      <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
 
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <p class="switch">
+        Already have an account? <a href="#" id="show-login">Login</a>
+      </p>
+    </div>
+
+    <!-- Login Section -->
+    <div class="form-container hidden">
+      <h2>Login</h2>
+      <form action="cafe.html" method="GET">
+        <label for="email-phone">Email or Phone</label>
+        <input type="text" id="email-phone" placeholder="Enter your email or phone number" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p class="switch">
+        Don't have an account? <a href="#" id="show-signup">Sign Up</a>
+      </p>
+    </div>
   </div>
 
   <script>
-    document.getElementById("signup-form").addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevents the default form submission
-      window.location.href = "login.html"; // Redirects to the login page
-    });
+    const showLoginLink = document.getElementById("show-login");
+    const showSignupLink = document.getElementById("show-signup");
+
+    const formContainers = document.querySelectorAll(".form-container");
+
+    if (showLoginLink && showSignupLink) {
+      showLoginLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        formContainers[0].classList.add("hidden"); // hide sign-up
+        formContainers[1].classList.remove("hidden"); // show login
+      });
+
+      showSignupLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        formContainers[1].classList.add("hidden"); // hide login
+        formContainers[0].classList.remove("hidden"); // show sign-up
+      });
+    }
   </script>
 </body>
+
 </html>
