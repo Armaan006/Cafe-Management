@@ -6,6 +6,49 @@
   <title>Sign-Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links .nav-item, .nav-links .btn {
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links .btn {
+      background-color: #f1a7c1;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-item:hover, .nav-links .btn:hover {
+      color: #ff6347;
+    }
+    
     body, html {
       margin: 0;
       padding: 0;
@@ -57,6 +100,21 @@
   </style>
 </head>
 <body>
+
+  <header class="navbar">
+    <div class="logo">Quirk & Quench</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html" class="nav-item">Home</a></li>
+        <li><a href="#features" class="nav-item">Features</a></li>
+        <li><a href="about us.html" class="nav-item">About Us</a></li>
+        <li><a href="contact us.html" class="nav-item">Contact Us</a></li>
+        <li><a href="login.html" class="btn">Login</a></li>
+        <li><a href="signup.html" class="btn">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="main-container">
     <h2>Sign Up</h2>
     <form id="signup-form">
