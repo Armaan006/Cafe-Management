@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quirk & Quench Café Management System</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links .nav-item, .btn {
+      margin-left: 20px;
+      font-size: 1.1rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links .btn {
+      background-color: #f1a7c1;
+      padding: 8px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-item:hover, .btn:hover {
+      color: #ff6347;
+      transition: all 0.3s ease;
+    }
+
+    </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Quirk & Quench</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html" class="nav-item">Home</a></li>
+        <li><a href="features.html" class="nav-item">Features</a></li>
+        <li><a href="about us.html" class="nav-item">About Us</a></li>
+        <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+        <li><a href="login.html" class="btn btn-login" id="loginBtn">Login</a></li>
+        <li><a href="signup.html" class="btn btn-signup" id="signupBtn">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  </body>
+</html>
