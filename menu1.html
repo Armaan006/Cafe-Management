@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Cafe Menu</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability */
+    }
+
+    /* Menu Container */
+    .menu-container {
+      background-color: rgba(28, 28, 28, 0.8); /* Slightly transparent background */
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      padding: 30px; /* Increased padding */
+      text-align: center;
+      overflow-y: auto;
+      max-height: 90vh; /* Limit height of menu */
+    }
+    /* Menu Section Styling */
+    .menu-section {
+      margin-bottom: 25px;
+    }
+    .menu-section h3 {
+      font-size: 22px; /* Larger font size for section title */
+      text-transform: uppercase;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #857e55; /* Gold color for section titles */
+    }
+
+    /* Menu Items Styling */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 18px; /* Larger font size */
+      padding: 8px 0;
+    }
+    span {
+      color: #ccc;
+    }
+     /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .header h2 {
+        font-size: 20px;
+      }
+
+      .menu-section h3 {
+        font-size: 20px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+      input[type="number"] {
+        width: 50px;
+      }
+
+      .order-btn, .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  </head>
+  <body>
+  <div class="menu-container">
+    <div class="header">
+      <h1>Coffee Cafe</h1>
+      <h2>MENU</h2>
+    </div>
+      <!-- Iced Section -->
+    <div class="menu-section">
+      <h3>ICED</h3>
+      <ul>
+        <li>Iced Coffee <span>₹180</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Iced Tea <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Mocha Latte <span>₹180</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Frappe Latte <span>₹200</span> <input type="number" min="0" placeholder="Qty" /></li>
+      </ul>
+      <button class="order-btn">Order Iced</button>
+    </div>
+      <script>
+    // Optional: Handle the submission logic (e.g., collect orders and submit)
+    document.querySelector('.submit-btn').addEventListener('click', function() {
+      alert('Order Submitted! Thank you for choosing Coffee Cafe.');
+    });
+  </script>
+</body>
+</html>
