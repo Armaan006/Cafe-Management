@@ -13,6 +13,7 @@ Welcome to our **Cafe Management System** — a modern, user-friendly web applic
 
 **💡 GETTING STARTED**
 
-**Prerequisites**
+**Prerequisites**  
 Before running the project, ensure you have the following installed:
+
 ● **Code Editor** (e.g., VS Code)
