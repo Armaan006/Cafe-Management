@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Store Menu</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability */
+    }
+      /* Header Section */
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Cursive', sans-serif;
+      font-size: 32px; /* Larger font size */
+      margin: 0;
+      color: #938b66; /* Gold color for the header */
+    }
+
+    .header h2 {
+      font-size: 20px; /* Larger sub-header font size */
+      color: #F5F5F5;
+      margin: 5px 0;
+    }
+    /* Menu Items Styling */
+    ul {
+      list-style: none;
+      padding: 0;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 18px; /* Increased font size */
+      padding: 8px 0;
+    }
+
+    span {
+      color: #ccc;
+    }
+
+    /* Hover Effect for Menu Items */
+    li:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+       /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .header h2 {
+        font-size: 18px;
+      }
+
+      .menu-section h3 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+      input[type="number"] {
+        width: 50px;
+      }
+
+      .order-btn, .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="header">
+      <h1>Slice Of Heaven</h1>
+      <h2>MENU</h2>
+    </div>
+    <div class="menu-section">
+      <h3>Pizzas</h3>
+      <ul>
+        <!-- Additional Pizzas -->
+        <li>BBQ Chicken <span>R ₹229 / M ₹389</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Hawaiian <span>R ₹239 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Spicy Peri-Peri Chicken <span>R ₹249 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Chicken Tikka Delight <span>R ₹259 / M ₹419</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Veg Supreme <span>R ₹239 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese Explosion <span>R ₹269 / M ₹439</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Pepperoni Special <span>R ₹259 / M ₹429</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Classic Margherita with Garlic Crust <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        </ul>
+      <button class="order-btn">Order Pizzas</button>
+    </div>
+
+    <!-- Submit Order Button -->
+    <button class="submit-btn">Submit Order</button>
+  </div>
+
+  <script>
+    // Optional: Handle the submission logic (e.g., collect orders and submit)
+    document.querySelector('.submit-btn').addEventListener('click', function() {
+      alert('Order Submitted! Thank you for choosing our Bakery Store.');
+    });
+  </script>
+</body>
+</html>
