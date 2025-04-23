@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Chaat Menu</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability */
+    }
+
+    /* Menu Section Styling */
+    .menu-section {
+      margin-bottom: 30px;
+    }
+
+    .menu-section h3 {
+      font-size: 20px; /* Larger font size for section title */
+      text-transform: uppercase;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #857e55; /* Gold color for section titles */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 18px; /* Increased font size */
+      padding: 8px 0;
+    }
+
+    span {
+      color: #ccc;
+    }
+
+    /* Hover Effect for Menu Items */
+    li:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .header h2 {
+        font-size: 18px;
+      }
+
+      .menu-section h3 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+      input[type="number"] {
+        width: 50px;
+      }
+
+      .order-btn, .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="header">
+      <h1>Indian Cuisine</h1>
+      <h2>MENU</h2>
+    </div>
+
+    <!-- Chaat Section -->
+    <div class="menu-section">
+      <h3>CHAAT ITEMS</h3>
+      <ul>
+        <li>Pani Puri <span>₹50</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Bhel Puri <span>₹70</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Sev Puri <span>₹60</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Aloo Tikki Chaat <span>₹80</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Ragda Pattice <span>₹90</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Palak Chaat <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Papdi Chaat <span>₹75</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Samosa Chaat <span>₹100</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Kachori Chaat <span>₹110</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Vada Pav Chaat <span>₹80</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Fruit Chaat <span>₹150</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Misal Pav <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Chole Bhature Chaat <span>₹150</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Dahi Puri <span>₹70</span> <input type="number" min="0" placeholder="Qty" /></li>
+      </ul>
+      <button class="order-btn">Order Chaat Items</button>
+    </div>
+
+    <!-- Submit Order Button -->
+    <button class="submit-btn">Submit Order</button>
+  </div>
+
+  </body>
+</html>
