@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Store Menu</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability */
+    }
+    
+    /* Menu Section Styling */
+    .menu-section {
+      margin-bottom: 30px;
+    }
+
+    .menu-section h3 {
+      font-size: 20px; /* Larger font size for section title */
+      text-transform: uppercase;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #857e55; /* Gold color for section titles */
+    }
+    /* Input Fields for Quantity */
+    input[type="number"] {
+      width: 60px; /* Larger input field */
+      padding: 8px;
+      font-size: 16px; /* Larger font size */
+      border-radius: 5px;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="header">
+      <h1>Sweet Spot</h1>
+      <h2>MENU</h2>
+    </div>
+    <!-- Bakery Section -->
+    <div class="menu-section">
+      <h3>BAKERY ITEMS</h3>
+      <ul>
+        <li>Chocolate Croissant <span>₹70</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cinnamon Roll <span>₹80</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Blueberry Muffin <span>₹90</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Almond Biscotti <span>₹100</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Chocolate Cake <span>₹250</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Vanilla Cupcake <span>₹150</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Lemon Drizzle Cake <span>₹200</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese Danish <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Fruit Tart <span>₹180</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Apple Pie <span>₹180</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Carrot Cake <span>₹220</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Brownie <span>₹130</span> <input type="number" min="0" placeholder="Qty" /></li>
+    </ul>
+      <button class="order-btn">Order Bakery Items</button>
+    </div>
+    </body>
+</html>
