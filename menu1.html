@@ -78,6 +78,39 @@
     span {
       color: #ccc;
     }
+    /* Hover Effect for Menu Items */
+    li:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Input Fields for Quantity */
+    input[type="number"] {
+      width: 60px;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #444;
+    }
+
+    /* Order and Submit Buttons */
+    .order-btn, .submit-btn {
+      background-color: #847361;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px; /* Larger font size */
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .order-btn:hover, .submit-btn:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+    }
      /* Responsive Design */
     @media (max-width: 768px) {
       .menu-container {
