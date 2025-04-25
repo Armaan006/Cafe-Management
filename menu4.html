@@ -20,6 +20,18 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability */
     }
 
+    /* Menu Container */
+    .menu-container {
+      background-color: rgba(28, 28, 28, 0.8); /* Slightly transparent background */
+      width: 450px; /* Increased width */
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      padding: 30px; /* Increased padding */
+      text-align: center;
+      overflow-y: auto; /* Added scroll for long lists */
+      max-height: 90vh; /* Limit height of menu */
+    }
+
     /* Menu Section Styling */
     .menu-section {
       margin-bottom: 30px;
@@ -34,6 +46,7 @@
       color: #857e55; /* Gold color for section titles */
     }
 
+    /*Menu Items Styling*/
     ul {
       list-style: none;
       padding: 0;
@@ -45,7 +58,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
-      font-size: 18px; /* Increased font size */
+      font-size: 18px;
       padding: 8px 0;
     }
 
@@ -58,6 +71,15 @@
       background-color: #E4A56E;
       transform: scale(1.05);
       transition: all 0.3s ease;
+    }
+
+    /* Input Fields for Quantity */
+    input[type="number"] {
+      width: 60px; /* Larger input field */
+      padding: 8px;
+      font-size: 16px; /* Larger font size */
+      border-radius: 5px;
+      border: 1px solid #444;
     }
 
     /* Responsive Design */
@@ -94,6 +116,7 @@
     }
   </style>
 </head>
+  
 <body>
   <div class="menu-container">
     <div class="header">
