@@ -23,13 +23,31 @@
     /* Menu Container */
     .menu-container {
       background-color: rgba(28, 28, 28, 0.8); /* Slightly transparent background */
-      width: 450px; /* Increased width */
+      width: 450px;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      padding: 30px; /* Increased padding */
+      padding: 30px;
       text-align: center;
       overflow-y: auto; /* Added scroll for long lists */
       max-height: 90vh; /* Limit height of menu */
+    }
+
+    /* Header Section */
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Cursive', sans-serif;
+      font-size: 32px;
+      margin: 0;
+      color: #938b66;
+    }
+
+    .header h2 {
+      font-size: 20px;
+      color: #F5F5F5;
+      margin: 5px 0;
     }
 
     /* Menu Section Styling */
@@ -38,12 +56,12 @@
     }
 
     .menu-section h3 {
-      font-size: 20px; /* Larger font size for section title */
+      font-size: 20px;
       text-transform: uppercase;
       border-bottom: 2px solid #444;
       padding-bottom: 8px;
       margin-bottom: 20px;
-      color: #857e55; /* Gold color for section titles */
+      color: #857e55;
     }
 
     /*Menu Items Styling*/
@@ -142,6 +160,12 @@
         <li>Misal Pav <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Chole Bhature Chaat <span>₹150</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Dahi Puri <span>₹70</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <!-- Additional Chaat Items -->
+        <li>Khasta Kachori <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Papdi Samosa <span>₹90</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Chana Chaat <span>₹80</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Sweet Dahi Puri <span>₹100</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Sundal Chaat <span>₹90</span> <input type="number" min="0" placeholder="Qty" /></li>
       </ul>
       <button class="order-btn">Order Chaat Items</button>
     </div>
