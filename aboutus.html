@@ -40,12 +40,14 @@
       list-style: none;
     }
 
-    .nav-links .nav-item, .btn {
+    .nav-links .nav-item,
+    .nav-links .btn {
       margin-left: 20px;
       font-size: 1.1rem;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
+      transition: color 0.3s ease;
     }
 
     .nav-links .btn {
@@ -54,10 +56,87 @@
       border-radius: 5px;
     }
 
-    .nav-links .nav-item:hover, .btn:hover {
+    .nav-links .nav-item:hover,
+    .nav-links .btn:hover {
       color: #ff6347;
-      transition: all 0.3s ease;
     }
+
+    .hidden {
+      display: none;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 70px); /* Adjust for navbar height */
+      padding: 20px;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #333;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .form-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #f1a7c1;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ff6347;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .switch a {
+      color: #f1a7c1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch a:hover {
+      color: #ff6347;
+    }
+    
     /* About Us Section */
     .about-us {
       background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center/cover;
