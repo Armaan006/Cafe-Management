@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Quirk & Quench</title>
   <style>
     /* Global Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      color: #fff;
+      box-sizing: border-box;
     }
 
-    h1, h2, h3 {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center/cover;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
       color: #fff;
     }
 
@@ -24,8 +33,10 @@
       align-items: center;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 20px;
-      position: sticky;
+      height: 60px;
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 100;
     }
 
@@ -36,6 +47,8 @@
     }
 
     .nav-links {
+      margin: 0;
+      padding: 0;
       display: flex;
       list-style: none;
     }
@@ -43,6 +56,7 @@
     .nav-links .nav-item,
     .nav-links .btn {
       margin-left: 20px;
+      text-decoration: none;
       font-size: 1.1rem;
       color: #fff;
       text-transform: uppercase;
@@ -70,7 +84,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: calc(100vh - 70px); /* Adjust for navbar height */
+      height: calc(100vh - 70px);
+      /* Adjust for navbar height */
       padding: 20px;
     }
 
@@ -116,10 +131,6 @@
       cursor: pointer;
     }
 
-    .btn:hover {
-      background-color: #ff6347;
-    }
-
     .switch {
       text-align: center;
       margin-top: 10px;
@@ -136,76 +147,136 @@
     .switch a:hover {
       color: #ff6347;
     }
-    
+
     /* About Us Section */
     .about-us {
       background: url('https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg') no-repeat center center/cover;
-      padding: 100px 20px;
-      text-align: center;
+      padding: 120px 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .about-us .content {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(225, 225, 225, 0.85);
       padding: 40px;
-      border-radius: 10px;
-      display: inline-block;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .about-us .content h2 {
-      font-size: 2.5rem;
+    .about-us .text {
+      flex: 1;
+      padding-right: 20px;
+      text-align: left;
+    }
+
+    .about-us .text h1 {
+      font-size: 3rem;
       margin-bottom: 20px;
+      color: #222;
     }
 
-    .about-us .content p {
+    .about-us .text p {
       font-size: 1.2rem;
       margin-bottom: 20px;
+      color: #555;
     }
 
-    .about-us .content ul {
-      list-style: none;
-      padding: 0;
+    .about-us .about-image {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .about-us .content ul li {
-      font-size: 1.2rem;
-      margin: 10px 0;
+    .about-us .about-image img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     }
-    </style>
+
+    /*Responsive Design*/
+    @media (max-width: 768px) {
+      .about-us {
+        padding: 70px 20px;
+      }
+
+      .about-us .content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-us .content h1 {
+        font-size: 2.5rem;
+      }
+
+      .about-us .content p {
+        font-size: 1rem;
+      }
+
+      .about-us .text {
+        padding-right: 0;
+      }
+
+      .about-us .about-image {
+        margin-top: 20px;
+      }
+
+      .about-us .about-image img {
+        width: 200px;
+      }
+    }
+  </style>
 </head>
-<body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Quirk & Quench</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="home.html" class="nav-item">Home</a></li>
-        <li><a href="home.html#features" class="nav-item">Features</a></li>
-        <li><a href="aboutus.html" class="nav-item">About Us</a></li>
-        <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
-        <li><a href="login.html" class="btn">Login</a></li>
-        <li><a href="signup.html" class="btn">Sign Up</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- About Us Section -->
-  <section class="about-us">
-    <div class="content">
-      <h2>Welcome to Quirk & Quench</h2>
-      <p>
-        At Quirk & Quench, we specialize in providing cutting-edge solutions for café management. Our goal is to help you create a seamless experience for both your staff and customers.
-      </p>
-      <p>
-        With our tools, managing daily operations, tracking inventory, and engaging with customers has never been easier. Let us help you focus on serving great coffee and unforgettable experiences.
-      </p>
-      <h3>Our Key Features:</h3>
-      <ul>
-        <li>Real-time inventory tracking to prevent stockouts.</li>
-        <li>Streamlined order management for faster service.</li>
-        <li>Data analytics to help you make informed decisions.</li>
-        <li>Customer engagement tools to build loyalty.</li>
-      </ul>
-    </div>
-  </section>
-  </body>
+<body>
+  <!-- Main content wrapper with higher z-index -->
+  <div style="position: relative; z-index: 1;">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Quirk & Quench</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-item">Home</a></li>
+          <li><a href="home.html#features" class="nav-item">Features</a></li>
+          <li><a href="aboutus.html" class="nav-item">About Us</a></li>
+          <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
+          <li><a href="login.html" class="btn">Login</a></li>
+          <li><a href="signup.html" class="btn">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+      <div class="content">
+        <div class="text">
+          <h1>Brewing Success in Every Cup</h1>
+          <p>
+            At <strong>Quirk & Quench</strong>, we redefine café management with smart, simple, and powerful solutions.
+            Our mission is to empower cafés to deliver exceptional service, manage operations effortlessly, and delight
+            customers every day.
+          </p>
+          <p>
+            With real-time inventory tracking, seamless order management, and actionable analytics, we help you focus on
+            what matters most — brewing unforgettable experiences.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg" alt="Cafe Illustration">
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+
 </html>
