@@ -7,49 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="login.css">
   <style>
-    /* Navbar Styles */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px 20px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-    }
-
-    .navbar .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-
-    .nav-links .nav-item, .nav-links .btn {
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 1rem;
-      color: #fff;
-      text-transform: uppercase;
-      transition: color 0.3s ease;
-    }
-    
-    .nav-links .btn {
-      background-color: #f1a7c1;
-      padding: 8px 15px;
-      border-radius: 5px;
-    }
-
-    .nav-links .nav-item:hover, .nav-links .btn:hover {
-      color: #ff6347;
-    }
-
     /* Global Styles */
     * {
       margin: 0;
@@ -60,7 +17,59 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #fff;
-      margin-top: 70px; /* Adding margin to avoid overlap with navbar */
+      margin-top: 70px;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      height:60px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav-links {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links .nav-item, .nav-links .btn {
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links .btn {
+      background-color: #f1a7c1;
+      padding: 8px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-links .nav-item:hover,
+    .nav-links .btn:hover {
+      color: #ff6347;
+    }
+
+    .hidden {
+      display: none;
     }
 
     .main-container {
@@ -113,11 +122,7 @@
       font-size: 1rem;
       cursor: pointer;
     }
-
-    .btn:hover {
-      background-color: #ff6347;
-    }
-
+    
     .switch {
       text-align: center;
       margin-top: 10px;
@@ -144,15 +149,58 @@
       <ul class="nav-links">
         <li><a href="home.html" class="nav-item">Home</a></li>
         <li><a href="home.html#features" class="nav-item">Features</a></li>
-        <li><a href="about us.html" class="nav-item">About Us</a></li>
-        <li><a href="contact us.html" class="nav-item">Contact Us</a></li>
+        <li><a href="aboutus.html" class="nav-item">About Us</a></li>
+        <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
         <li><a href="login.html" class="btn">Login</a></li>
         <li><a href="signup.html" class="btn">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
+<!-- Main Content -->
+  <div class="main-container">
+    <!-- Login Section -->
+    <div class="form-container">
+      <h2>Login</h2>
+      <form action="cafe.html" method="GET">
+        <label for="email-phone">Email or Phone</label>
+        <input type="text" id="email-phone" placeholder="Enter your email or phone number" required>
 
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p class="switch">
+        Don't have an account? <a href="#" id="show-signup">Sign Up</a>
+      </p>
+    </div>
+
+    <!-- Sign-Up Section -->
+    <div class="form-container hidden">
+      <h2>Sign Up</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" required>
+
+        <label for="email-phone-signup">Email or Phone</label>
+        <input type="text" id="email-phone-signup" placeholder="Enter your email or phone number" required>
+
+        <label for="password-signup">Password</label>
+        <input type="password" id="password-signup" placeholder="Create a password" required>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <p class="switch">
+        Already have an account? <a href="#" id="show-login">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>  
 
   </body>
 </html>
