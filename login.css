@@ -1,6 +1,8 @@
 /* General Styles */
 body {
 	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	margin-top: 70px;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -19,10 +21,12 @@ body {
 
   .form-container {
 	background: rgba(255, 255, 255, 0.8);
-	padding: 20px;
+	padding: 30px;
 	border-radius: 10px;
-	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-	animation: fadeIn 0.5s ease-in-out;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 400px;
+	color: #333;
   }
   
   .hidden {
