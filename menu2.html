@@ -94,6 +94,22 @@
       border-radius: 5px;
       border: 1px solid #444;
     }
+        /* Order and Submit Buttons */
+    .order-btn, .submit-btn {
+      background-color: #847361;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px; /* Larger font size */
+      border-radius: 5px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .order-btn:hover, .submit-btn:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+    }
        /* Responsive Design */
     @media (max-width: 768px) {
       .menu-container {
@@ -134,9 +150,29 @@
       <h1>Slice Of Heaven</h1>
       <h2>MENU</h2>
     </div>
+    <!-- Bakery Section -->
     <div class="menu-section">
       <h3>Pizzas</h3>
       <ul>
+        <li>Margherita <span>R ₹99 / M ₹219</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese & Tomato <span>R ₹119 / M ₹249</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Double Cheese Margherita <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese & Corn <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Veggie Italian <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Mushroom Lover <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Fresh Garden <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Tangy Schezwan Veg <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Tandoori Veg Wonder <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Margherita <span>R ₹99 / M ₹219</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese & Tomato <span>R ₹119 / M ₹249</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Double Cheese Margherita <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Cheese & Corn <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Veggie Italian <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Mushroom Lover <span>R ₹179 / M ₹319</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Fresh Garden <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Tangy Schezwan Veg <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Tandoori Veg Wonder <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Paneer Do Pyaza <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
         <!-- Additional Pizzas -->
         <li>BBQ Chicken <span>R ₹229 / M ₹389</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Hawaiian <span>R ₹239 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
@@ -146,6 +182,12 @@
         <li>Cheese Explosion <span>R ₹269 / M ₹439</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Pepperoni Special <span>R ₹259 / M ₹429</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Classic Margherita with Garlic Crust <span>R ₹199 / M ₹349</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <!-- More New Pizzas -->
+        <li>Four Cheese Delight <span>R ₹269 / M ₹439</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Chicken Alfredo <span>R ₹249 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Buffalo Chicken <span>R ₹259 / M ₹419</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Pineapple & Bacon <span>R ₹239 / M ₹399</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Meat Lovers <span>R ₹279 / M ₹459</span> <input type="number" min="0" placeholder="Qty" /></li>
         </ul>
       <button class="order-btn">Order Pizzas</button>
     </div>
