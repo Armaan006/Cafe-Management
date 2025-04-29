@@ -79,6 +79,12 @@
     span {
       color: #ccc;
     }
+        /* Hover Effect for Menu Items */
+    li:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
     
     /* Input Fields for Quantity */
     input[type="number"] {
@@ -87,6 +93,55 @@
       font-size: 16px; /* Larger font size */
       border-radius: 5px;
       border: 1px solid #444;
+    }
+    
+    /* Order and Submit Buttons */
+    .order-btn, .submit-btn {
+      background-color: #847361;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px; /* Larger font size */
+      border-radius: 5px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .order-btn:hover, .submit-btn:hover {
+      background-color: #E4A56E;
+      transform: scale(1.05);
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .header h2 {
+        font-size: 18px;
+      }
+
+      .menu-section h3 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+      input[type="number"] {
+        width: 50px;
+      }
+
+      .order-btn, .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -112,8 +167,27 @@
         <li>Apple Pie <span>₹180</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Carrot Cake <span>₹220</span> <input type="number" min="0" placeholder="Qty" /></li>
         <li>Brownie <span>₹130</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <!-- Additional Bakery Items -->
+        <li>Strawberry Cheesecake <span>₹300</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Banana Bread <span>₹150</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Pecan Pie <span>₹250</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Peach Cobbler <span>₹220</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Raspberry Tart <span>₹210</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Maple Walnut Scones <span>₹130</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Apricot Danish <span>₹120</span> <input type="number" min="0" placeholder="Qty" /></li>
+        <li>Churros <span>₹100</span> <input type="number" min="0" placeholder="Qty" /></li>
     </ul>
       <button class="order-btn">Order Bakery Items</button>
     </div>
+        <!-- Submit Order Button -->
+    <button class="submit-btn">Submit Order</button>
+  </div>
+
+  <script>
+    // Optional: Handle the submission logic (e.g., collect orders and submit)
+    document.querySelector('.submit-btn').addEventListener('click', function() {
+      alert('Order Submitted! Thank you for choosing our Bakery Store.');
+    });
+  </script>
     </body>
 </html>
