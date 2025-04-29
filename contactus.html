@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
   <title>Contact Us - Quirk & Quench Café Management System</title>
   <style>
    /* Global Styles */
-     {
+   * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -36,8 +36,10 @@
       align-items: center;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 20px;
-      position: sticky;
+      height: 60px;
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 100;
     }
 
@@ -48,16 +50,21 @@
     }
 
     .nav-links {
+      margin: 0;
+      padding: 0;
       display: flex;
       list-style: none;
     }
 
-    .nav-links .nav-item, .btn {
+    .nav-links .nav-item,
+    .nav-links .btn {
       margin-left: 20px;
+      text-decoration: none;
       font-size: 1.1rem;
+      letter-spacing: 2px;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      transition: color 0.3s ease;
     }
 
     .nav-links .btn {
@@ -66,9 +73,80 @@
       border-radius: 5px;
     }
 
-    .nav-links .nav-item:hover, .btn:hover {
+    .nav-links .nav-item:hover,
+    .nav-linkd .btn:hover {
       color: #ff6347;
-      transition: all 0.3s ease;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+     .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 70px);
+      padding: 20px;
+    }
+.form-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #333;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .form-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #f1a7c1;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #000;
+    }
+
+    .switch a {
+      color: #f1a7c1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch a:hover {
+      color: #ff6347;
     }
 
     /* Contact Form Section */
@@ -191,11 +269,11 @@
     <nav>
       <ul class="nav-links">
         <li><a href="home.html" class="nav-item">Home</a></li>
-        <li><a href="#features" class="nav-item">Features</a></li>
+        <li><a href="home.html#features" class="nav-item">Features</a></li>
         <li><a href="aboutus.html" class="nav-item">About Us</a></li>
         <li><a href="contactus.html" class="nav-item">Contact Us</a></li>
         <li><a href="login.html" class="btn btn-login" id="loginBtn">Login</a></li>
-        <li><a href="login.html" class="btn btn-signup" id="signupBtn">Sign Up</a></li>
+        <li><a href="signup.html" class="btn btn-signup" id="signupBtn">Sign Up</a></li>
       </ul>
     </nav>
   </header>
@@ -224,6 +302,24 @@
       
       <button type="submit">Submit</button>
     </div>
+
+    <!-- Modal for Feedback Submission (Optional) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Thank you for your feedback!</h2>
+      <p>We appreciate you taking the time to reach out to us. We will get back to you soon.</p>
+    </div>
+  </div>
+
+  <!-- Modal for Feedback Submission (Optional) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Thank you for your feedback!</h2>
+      <p>We appreciate you taking the time to reach out to us. We will get back to you soon.</p>
+    </div>
+  </div>
 <script>
     // Modal functionality for feedback submission
     const modal = document.getElementById('modal');
@@ -247,19 +343,6 @@
         modal.style.display = 'none';
       }
     });
-  </script>
-
-  
-
-  <!-- Modal for Feedback Submission (Optional) -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Thank you for your feedback!</h2>
-      <p>We appreciate you taking the time to reach out to us. We will get back to you soon.</p>
-    </div>
-  </div>
-
-
+</script>
 </body>
 </html>
